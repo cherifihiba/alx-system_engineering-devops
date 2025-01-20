@@ -15,4 +15,3 @@ package { 'Werkzeug':
   provider => 'pip3',
   require => Package['Flask'],
 }
-
