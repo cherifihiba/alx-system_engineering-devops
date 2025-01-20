@@ -1,7 +1,5 @@
-# Creates a manifest that kills a process named killmenow.
+# execute a command with puppet
 
-exec { 'killmenow':
-command => '/usr/bin/pkill killmenow',
-provider => 'shell',
-returns  => [0, 1],
+exec { 'pkill -f killmenow' :
+path => '/usr/bin/:/usr/local/bin/:/bin/',
 }
